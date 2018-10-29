@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -58,7 +59,6 @@ public class TradutorController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Tradutor tr = new Tradutor();
-        System.out.println(request.getParameter("palavra"));
         String traduzido = tr.traduzirPalavra(request.getParameter("palavra"));
         
         response.setContentType("text/html;charset=UTF-8");

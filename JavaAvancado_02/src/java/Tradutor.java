@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -16,7 +17,9 @@ public class Tradutor {
     public String traduzirPalavra(String aTraduzir)
     {   
      try {
-        FileReader arq = new FileReader("C:\\Users\\nessk\\git\\javaavancado_ita_tarefa02\\JavaAvancado_02\\src\\java\\traducoes.txt");
+         
+        FileReader arq = new FileReader("C:\\Users\\nessk\\git\\javaavancado_ita_tarefa02\\JavaAvancado_02\\traducoes.txt");
+        
         BufferedReader lerArq = new BufferedReader(arq);
         String linha = lerArq.readLine(); 
         while (linha != null) {   
